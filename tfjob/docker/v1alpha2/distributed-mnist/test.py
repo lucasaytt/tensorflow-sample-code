@@ -1,4 +1,3 @@
-print "cc"
 '''
 HelloWorld example using TensorFlow library.
 Author: Aymeric Damien

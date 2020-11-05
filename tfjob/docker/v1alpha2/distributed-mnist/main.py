@@ -37,16 +37,21 @@ FLAGS = None
 def train():
   tf_config_json = os.environ.get("TF_CONFIG", "{}")
   tf_config = json.loads(tf_config_json)
-  print("========tf_config====="+tf_config)
+  print("===========tf_config============")
+  print(tf_config)
   task = tf_config.get("task", {})
-  print("========task====="+task)
+  print("===========task============")
+  print(task)
   cluster_spec = tf_config.get("cluster", {})
-  print("========cluster_spec====="+cluster_spec)
+  print("===========cluster_spec============")
+  print(cluster_spec)
   cluster_spec_object = tf.train.ClusterSpec(cluster_spec)
   job_name = task["type"]
-  print("========job_name====="+job_name)
+  print("============job_name===========")
+  print(job_name)
   task_id = task["index"]
-  print("========task_id====="+task_id)
+  print("============task_id===========")
+  print(task_id)
   server_def = tf.train.ServerDef (
       cluster=cluster_spec_object.as_cluster_def(),
       protocol="grpc",

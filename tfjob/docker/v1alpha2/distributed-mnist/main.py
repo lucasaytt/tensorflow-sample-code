@@ -32,8 +32,8 @@ import tensorflow as tf
 
 from tensorflow.examples.tutorials.mnist import input_data
 
-os.unsetenv("http_proxy")
-os.unsetenv("https_proxy")
+# os.unsetenv("http_proxy")
+# os.unsetenv("https_proxy")
 FLAGS = None
 
 def train():
